@@ -1,0 +1,21 @@
+#
+#
+#
+version: '3'
+
+
+services:
+  discord_bot_ysh:
+    build: ./build
+    image: discord_bot_ysh
+    container_name: discord_bot_ysh
+    restart: always
+    #volumes:
+    #  - ./build/app/:/app/
+    labels:
+      - traefik.enable=false
+    env_file: .env
+
+
+
+
